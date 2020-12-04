@@ -1,0 +1,29 @@
+# Requisitos
+	1. Desenvolver sistema web
+	2. Contendo Menu
+		a. Listar Usuário
+			1. Grid com os usuários
+			2. Filtro que será filtrado por nome
+		b. Cadastrar Usuário
+			1. Apenas incluir novos usuários
+	3. Front e Back separados
+	4. Backend
+		a. Java
+		b. NodeJS
+		c. Python
+	5. Frontend
+		a. ReactJS (SPA - Single Page Application)
+		b. AngularJS
+		c. Angular4+
+		d. VueJS
+	6. README.md
+
+
++ banco de dados
+	- Script de inicialização
++ arquivo de texto
+	- Dificuldade na filtragem e busca
+
+
+
+
