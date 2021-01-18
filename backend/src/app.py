@@ -18,11 +18,6 @@ def __u(user):
 "created_at" : user[3] }
 
 
-@app.route("/")
-def home():
-    return '''
-    <h1 style="text-align:center">Home</h1>'''
-
 
 @app.route("/create_user", methods=["POST"])
 def create_user():

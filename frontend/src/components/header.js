@@ -1,4 +1,4 @@
-function MyHeader () {
+function MyHeader (props) {
 
     return <h1>MENU</h1>
 
