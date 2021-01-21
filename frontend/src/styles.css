@@ -1,11 +1,28 @@
-.form-align {
-	
-
+html, body {
+	font-size: 15px;
+	line-height: 1.5;
 }
 
-fieldset {
-	width: 50%;
-	text-align: center;
+.Container {
+	text-align: center !important;
+}
+
+.Register_container {
+	background-color: #f1f1f1;
+	margin: auto; 
+	max-width: 700px !important; 
+	text-align: left;
+	padding: 40px;
+}
+
+#submitbtn {
+	background-color: #4CAF50;
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+
 }
 
 .fname {

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './../styles.css'
 
 export default class Form extends Component {
 
@@ -6,59 +7,62 @@ export default class Form extends Component {
         return (
             <>
 
-            <form method="POST" action="/create_user">
-            <fieldset>
-                <div>
+            <div className="Register_container">
 
-                    <input 
-                        type="text"
-                        placeholder="Insira seu Nome" 
-                        id="reg_cpf" 
-                        name="reg_cpf" />
-                        
+                <div className="Container">
+                <h2> Cadastrar Usuário </h2>
                 </div>
 
-                <div>
+                <form action="/create_user" method="POST">
 
-                    <input 
-                        type="text"
-                        placeholder="Insira seu Sobrenome" 
-                        id="reg_cod_assinante" 
-                        name="reg_cod_assinante" />
+                    <div className="form-group">
 
-                </div>
+                      <label for="FName">Nome: </label>
+                      <input 
+                            type="text"
+                            class="form-control"
+                            id="fname"
+                            placeholder="Insira seu Nome" />
 
-                <div>
-                
-                <label>
-                    Masculino
-                </label>
+                    </div>
 
-                <input 
-                    type="radio"
-                    value="M" 
-                    id="mSexo" 
-                    name="reg_email" />
+                    <div className="form-group">
 
-                <input 
-                    type="radio"
-                    value="F" 
-                    id="fSexo" 
-                    name="form-align" />
+                      <label for="LName">Sobrenome: </label>
+                      <input 
+                            type="text"
+                            className="form-control"
+                            id="lname"
+                            placeholder="Insira seu Sobrenome" />
 
-                <label>
-                    Feminino
-                </label>
+                    </div>
 
-                </div>
+                    <div className="form-group">
 
-                <div>
-                	<input type="submit" value="Enviar"/>
-                </div>
+                        <label for="email">E-mail </label>
+                        <input 
+                            type="text"
+                            className="form-control"
+                            id="email"
+                            placeholder="Insira seu Email"
+                             />
 
-            </fieldset>
-            </form>
-            
+                    </div>
+
+                    <div className="form-group">
+
+                        <button
+                            type="submit"
+                            id="submitbtn"
+                             > Cadastrar </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+    
+
             </>
         )
 
