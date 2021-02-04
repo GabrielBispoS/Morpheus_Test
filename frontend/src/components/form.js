@@ -13,14 +13,14 @@ export default class Form extends Component {
                 <h2> Cadastrar Usuário </h2>
                 </div>
 
-                <form action="/create_user" method="POST">
+                <form method="POST" enctype="multipart/form-data">
 
                     <div className="form-group">
 
-                      <label for="FName">Nome: </label>
+                      <label for="fname">Nome: </label>
                       <input 
                             type="text"
-                            class="form-control"
+                            className="fname form-control"
                             id="fname"
                             placeholder="Insira seu Nome" />
 
@@ -28,10 +28,10 @@ export default class Form extends Component {
 
                     <div className="form-group">
 
-                      <label for="LName">Sobrenome: </label>
+                      <label for="lname">Sobrenome: </label>
                       <input 
                             type="text"
-                            className="form-control"
+                            className="lname form-control"
                             id="lname"
                             placeholder="Insira seu Sobrenome" />
 
@@ -42,7 +42,7 @@ export default class Form extends Component {
                         <label for="email">E-mail </label>
                         <input 
                             type="text"
-                            className="form-control"
+                            className="email form-control"
                             id="email"
                             placeholder="Insira seu Email"
                              />
@@ -51,16 +51,18 @@ export default class Form extends Component {
 
                     <div className="form-group">
 
-                        <button
+                        <input
                             type="submit"
                             id="submitbtn"
-                             > Cadastrar </button>
+                            value="Cadastrar"
+                            />
 
                     </div>
 
                 </form>
 
             </div>
+    
     
 
             </>

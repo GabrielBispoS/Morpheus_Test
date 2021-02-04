@@ -1,0 +1,14 @@
+Fazer o deploy da aplicacao com shell script -> echo mkdir "logs.sh" (Ver estrutura), apos isso, os dados serao mostrados sequencialmente.
+
+-------------------------------------------------------------
+#!/bin/bash
+
+mkdir logs.txt
+
+python3 app.py # Inicializa o arquivo principal ou flask run para inicializar o arquivo
+ 
+npm run prod # Roda a aplicacao React
+-------------------------------------------------------------
+
+
+

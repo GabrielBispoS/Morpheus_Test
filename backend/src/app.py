@@ -14,7 +14,7 @@ def __u(user):
     return {
 "fname" : user[0] ,
 "lname" : user[1] ,
-"gender" : user[2] ,
+"email" : user[2] ,
 "created_at" : user[3] }
 
 
@@ -22,13 +22,13 @@ def __u(user):
 @app.route("/create_user", methods=["POST"])
 def create_user():
     
-    data = request.get_json()
+    # data = request.json()
 
-    fname = data['fname']
-    lname = data['lname']
-    gender = data['gender']
+    fname = request.form.get('fname')
+    lname = request.form.get('lname', '')
+    email = request.form.get('email', '')
 
-    query = f"""INSERT INTO employee (fname, lname, gender) VALUES ('{fname}', '{lname}', '{gender}')"""
+    query = f"""INSERT INTO employee (fname, lname, email) VALUES ('{fname}', '{lname}', '{email}')"""
 
     cursor.execute(query)
     connection.commit()

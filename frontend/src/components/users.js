@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './../styles.css'
+import axios from 'axios';
 
-export default class Form extends Component {
+export default class users extends Component {
 
     constructor(props) {
         super(props);
@@ -25,11 +26,10 @@ export default class Form extends Component {
         return (
             <>
 
-            <MyHeader> </MyHeader>
-                <h1>Titulo da página</h1>
-                    <ul>
-                        {this.state.persons.map(person => <li>{person.fname}</li>)}
-                    </ul>    
+            <h1>Titulo da página</h1>
+                <ul>
+                    {this.state.persons.map(person => <li>{person.fname}</li>)}
+                </ul>    
 
             </>
         )

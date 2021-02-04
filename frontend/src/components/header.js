@@ -1,7 +1,30 @@
-function MyHeader (props) {
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-    return <h1>AQUI VAI A NAVBAR</h1>
+const links = [
+	{route: "/users", label: "Listar Usuários"},
+	{route: "/create_user", label: "Cadastrar Usuário"}
+];
 
-}
+export default class Navbar extends Component {
 
-export default MyHeader;
+    renderLink = () => {
+        return links.map( link => 
+            <Link key={link.route} className="nav-link" to={link.route}>
+                {link.label}
+            </Link>
+        )
+    }
+
+    render() {
+        return (
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        { this.renderLink() }
+                    </ul>
+                </div>
+            </nav>
+        )
+    }
+};
